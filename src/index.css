@@ -4,4 +4,33 @@
 
 :root {
     font-family: "Satoshi", sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+body {
+    --sb-track-color: #525151;
+    --sb-thumb-color: #8e8e8e;
+    --sb-size: 6px;
+}
+
+body::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
 }

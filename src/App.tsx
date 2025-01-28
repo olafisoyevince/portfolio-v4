@@ -1,21 +1,18 @@
-import BlurText from "./components/BlurText";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import About from "./components/About";
+import Projects from "./components/Projects";
 
 function App() {
-    const handleAnimationComplete = () => {
-        console.log("Animation completed!");
-    };
-
     return (
-        <div className=" flex justify-center items-center h-[100dvh]">
-            <BlurText
-                text="Coming Soon!"
-                delay={150}
-                animateBy="words"
-                direction="top"
-                onAnimationComplete={handleAnimationComplete}
-                className=" font-semibold text-9xl mb-8"
-            />
-        </div>
+        <section className=" px-10">
+            <Navbar />
+            <Hero />
+            <Projects />
+            <About />
+            <Footer />
+        </section>
     );
 }
 
